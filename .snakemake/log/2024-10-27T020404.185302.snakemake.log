@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+get_tpm        1              1              1
+plot           1              1              1
+total          2              1              1
+
+Select jobs to execute...
+
+[Sun Oct 27 02:04:05 2024]
+rule get_tpm:
+    output: x_tpm.tsv
+    jobid: 1
+    reason: Missing output files: x_tpm.tsv
+    wildcards: type=x
+    resources: tmpdir=/tmp
+
+[Sun Oct 27 02:04:05 2024]
+Error in rule get_tpm:
+    jobid: 1
+    output: x_tpm.tsv
+    shell:
+        cat 'data/gdc_sample_sheet.tsv' | python get_tpm.py NKX2-1 ['Solid Tissue Normal','Primary Tumor'] 'data/'
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-10-27T020404.185302.snakemake.log

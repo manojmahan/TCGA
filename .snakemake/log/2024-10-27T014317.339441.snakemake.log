@@ -1,0 +1,4 @@
+KeyError in file /home/mkmahan/TCGA/main.smk, line 5:
+"None of ['name'] are in the columns"
+  File "/home/mkmahan/TCGA/main.smk", line 5, in <module>
+  File "/home/mkmahan/miniforge3/lib/python3.12/site-packages/pandas/core/frame.py", line 6122, in set_index

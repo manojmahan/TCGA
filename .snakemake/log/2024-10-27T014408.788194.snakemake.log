@@ -1,0 +1,13 @@
+ParserError in file /home/mkmahan/TCGA/main.smk, line 3:
+Error tokenizing data. C error: Expected 2 fields in line 3, saw 3
+
+  File "/home/mkmahan/TCGA/main.smk", line 3, in <module>
+  File "/home/mkmahan/miniforge3/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+  File "/home/mkmahan/miniforge3/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+  File "/home/mkmahan/miniforge3/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+  File "/home/mkmahan/miniforge3/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error

@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule plot in file /home/mkmahan/TCGA/main.smk, line 27:
+Missing input files for rule plot:
+    output: ggplots/plot_stn_pt.pdf
+    affected files:
+        'SolidTissueNormal'

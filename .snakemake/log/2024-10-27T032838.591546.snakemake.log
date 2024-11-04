@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+plot         1              1              1
+total        1              1              1
+
+Select jobs to execute...
+
+[Sun Oct 27 03:28:39 2024]
+rule plot:
+    input: SolidTissueNormal_tpm.tsv
+    output: ggplots/plot_stn_pt.pdf
+    jobid: 0
+    reason: Missing output files: ggplots/plot_stn_pt.pdf
+    resources: tmpdir=/tmp
+
+[Sun Oct 27 03:28:40 2024]
+Error in rule plot:
+    jobid: 0
+    input: SolidTissueNormal_tpm.tsv
+    output: ggplots/plot_stn_pt.pdf
+    shell:
+        Rscript plot.R Solid Tissue Normal
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-10-27T032838.591546.snakemake.log

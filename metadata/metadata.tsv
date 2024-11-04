@@ -1,0 +1,5 @@
+name	value
+gene	"NKX2-1"
+conditions	'Solid Tissue Normal','Primary Tumor'
+gdc_sample_file	'data/gdc_sample_sheet.tsv'
+tcga_data_directory	'data/'

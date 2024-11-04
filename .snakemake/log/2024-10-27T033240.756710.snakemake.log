@@ -1,0 +1,8 @@
+Building DAG of jobs...
+InputFunctionException in rule plot in file /home/mkmahan/TCGA/main.smk, line 29:
+Error:
+  AttributeError: 'Wildcards' object has no attribute 'split'
+Wildcards:
+
+Traceback:
+  File "/home/mkmahan/TCGA/main.smk", line 31, in <lambda>

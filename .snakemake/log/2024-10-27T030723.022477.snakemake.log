@@ -1,0 +1,3 @@
+NameError in file /home/mkmahan/TCGA/main.smk, line 29:
+name 'params' is not defined
+  File "/home/mkmahan/TCGA/main.smk", line 29, in <module>

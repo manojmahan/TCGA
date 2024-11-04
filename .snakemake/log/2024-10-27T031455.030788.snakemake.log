@@ -1,0 +1,3 @@
+NameError in file /home/mkmahan/TCGA/main.smk, line 12:
+name 'onditions' is not defined
+  File "/home/mkmahan/TCGA/main.smk", line 12, in <module>

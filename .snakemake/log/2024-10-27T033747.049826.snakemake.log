@@ -1,0 +1,53 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+get_tpm        2              1              1
+plot           1              1              1
+total          3              1              1
+
+Select jobs to execute...
+
+[Sun Oct 27 03:37:48 2024]
+rule get_tpm:
+    output: PrimaryTumor_tpm.tsv
+    jobid: 2
+    reason: Params have changed since last execution
+    wildcards: type=PrimaryTumor
+    resources: tmpdir=/tmp
+
+[Sun Oct 27 03:39:02 2024]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Sun Oct 27 03:39:02 2024]
+rule get_tpm:
+    output: SolidTissueNormal_tpm.tsv
+    jobid: 1
+    reason: Missing output files: SolidTissueNormal_tpm.tsv
+    wildcards: type=SolidTissueNormal
+    resources: tmpdir=/tmp
+
+Warning: the following output files of rule get_tpm were not present when the DAG was created:
+{'SolidTissueNormal_tpm.tsv'}
+[Sun Oct 27 03:40:20 2024]
+Finished job 1.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Sun Oct 27 03:40:20 2024]
+rule plot:
+    input: SolidTissueNormal_tpm.tsv, PrimaryTumor_tpm.tsv
+    output: ggplots/plot_stn_pt.pdf
+    jobid: 0
+    reason: Input files updated by another job: PrimaryTumor_tpm.tsv, SolidTissueNormal_tpm.tsv
+    resources: tmpdir=/tmp
+
+[Sun Oct 27 03:40:22 2024]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2024-10-27T033747.049826.snakemake.log

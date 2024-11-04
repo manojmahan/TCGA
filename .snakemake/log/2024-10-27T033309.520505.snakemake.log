@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+get_tpm        2              1              1
+plot           1              1              1
+total          3              1              1
+
+Select jobs to execute...
+
+[Sun Oct 27 03:33:11 2024]
+rule get_tpm:
+    output: 'PrimaryTumor'_tpm.tsv
+    jobid: 2
+    reason: Missing output files: 'PrimaryTumor'_tpm.tsv
+    wildcards: type='PrimaryTumor'
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule get_tpm in file /home/mkmahan/TCGA/main.smk, line 17:
+Job 2  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+'PrimaryTumor'_tpm.tsv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-10-27T033309.520505.snakemake.log

@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+get_tpm        1              1              1
+plot           1              1              1
+total          2              1              1
+
+Select jobs to execute...
+
+[Sun Oct 27 01:54:04 2024]
+rule get_tpm:
+    output: stn_tpm.tsv
+    jobid: 1
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: type=stn
+    resources: tmpdir=/tmp
+
+[Sun Oct 27 01:55:40 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Sun Oct 27 01:55:40 2024]
+rule plot:
+    input: stn_tpm.tsv
+    output: ggplots/plot_stn_pt.pdf
+    jobid: 0
+    reason: Input files updated by another job: stn_tpm.tsv
+    resources: tmpdir=/tmp
+
+[Sun Oct 27 01:55:41 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-10-27T015403.613648.snakemake.log

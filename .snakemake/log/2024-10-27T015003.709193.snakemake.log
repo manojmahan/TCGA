@@ -1,0 +1,5 @@
+KeyError in file /home/mkmahan/TCGA/main.smk, line 7:
+'gene'
+  File "/home/mkmahan/TCGA/main.smk", line 7, in <module>
+  File "/home/mkmahan/miniforge3/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+  File "/home/mkmahan/miniforge3/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
