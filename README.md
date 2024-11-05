@@ -9,5 +9,11 @@ curl -JLO "https://figshare.com/ndownloader/files/49623510?private_link=fd7276e3
 tar -zxvf tcga_data.tar.gz
 cd ../
 ```
+### Edit the metadata.tsv as per the requirements
+### run snakemake
+
+```
+snakemake --snakefile main.smk ggplots/plot_stn_pt.pdf -j1
+```
 
  
